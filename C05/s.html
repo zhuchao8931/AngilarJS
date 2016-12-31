@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>控制器</title>
+    <script src="//cdn.bootcss.com/angular.js/1.6.1/angular.min.js"></script>
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller("MyController", function ($scope) {
+            $scope.person1 = {name: "R"}
+        })
+
+        app.controller("ParentController", function ($scope) {
+            $scope.person = {greed: true};
+        })
+
+        app.controller("ChildController", function ($scope) {
+            $scope.sayHello = function () {
+                $scope.person.name = "R";
+            }
+        })
+    </script>
+</head>
+<body>
+<div ng-app="myApp">
+    <div ng-controller="MyController">
+        <h1>{{person1}}</h1>
+        名字
+        <h2>{{person1.name}}</h2>
+    </div>
+    <div ng-controller="ParentController">
+        <div ng-controller="ChildController">
+            <a ng-click="sayHello()">Say Hello</a>
+        </div>
+        {{person}}
+    </div>
+
+</div>
+</body>
+</html>
