@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Date过滤器😄</title>
+    <script src="//cdn.bootcss.com/angular.js/1.6.1/angular.min.js"></script>
+    <script src="app01.js"></script>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="MyController">
+    <pre>
+        本地格式化日期
+        {{ today|date:"medium"}}
+        {{ today|date:"short"}}
+        {{today|date:"fullDate"}}
+        {{today|date:"longDate"}}
+        {{today|date:"mediumDate"}}
+        {{today|date:"shortDate"}}
+        {{today|date:"mediumTime"}}
+        {{today|date:"shortTime"}}
+        年份格式化
+        {{ today |date:"yyyy"}}
+        {{ today |date:"yy"}}
+        {{ today |date:"y"}}
+        月份格式化
+        {{today|date:"MMMM"}}
+        {{today|date:"MMM"}}
+        {{today|date:"MM"}}
+        {{today|date:"M"}}
+        日期格式化
+        {{today|date:"dd"}}
+        {{today|date:"d"}}
+        {{today|date:"EEEE"}}
+        {{today|date:"EEE"}}
+        小时格式化
+        {{today|date:"HH"}}
+        {{today|date:"H"}}
+        {{today|date:"hh"}}
+        {{today|date:"h"}}
+        分钟格式化
+        {{today|date:"mm"}}
+        {{today|date:"m"}}
+        秒格式化
+        {{today|date:"ss"}}
+        {{today|date:"s"}}
+        {{today|date:".sss"}}
+        字符格式化
+        {{today|date:"a"}}
+        {{today|date:"Z"}}
+
+    </pre>
+</div>
+</body>
+</html>
