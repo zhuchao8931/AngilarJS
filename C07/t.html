@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>filter过滤器</title>
+    <script src="//cdn.bootcss.com/angular.js/1.6.1/angular.min.js"></script>
+    <script src="app01.js"></script>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="MyController">
+    {{["Ari","Ring","Likes","to"]|filter:"i"}}
+    <br>
+    {{ [{
+    "name":"Chao",
+    "City":"YuYao",
+    "favorite food":"Chinese Food"
+    },{
+    "name":"Ring",
+    "City":"ZheJiang"
+    ,"favorite food":"Food"}] | filter:{"name":"Chao"}
+    }}
+    <br>
+    {{["Ari","Ring","Likes","to"]|filter:isCapitalized}}
+</div>
+</body>
+</html>
