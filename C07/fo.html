@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>json过滤器</title>
+    <script src="//cdn.bootcss.com/angular.js/1.6.1/angular.min.js"></script>
+    <script src="app01.js"></script>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="MyController">
+    {{{ "name":"Chao", "City":"YuYao", "favorite food":"Chinese Food" }|json}}
+    <br>
+    {{["a","b","c","d","e"]|limitTo:3}}
+    {{"Zhe shi yi ge heng chang de gu shi"|limitTo:3}}
+    {{"Zhe shi yi ge heng chang de gu shi"|limitTo:-3}}
+    <br>
+    {{"Zhe shi yi ge heng chang de gu shi"|lowercase}}
+    <br>
+    {{"Zhe shi yi ge heng chang de gu shi"|uppercase}}
+    <br>
+    <br>
+    {{1234567890|number}}
+    <br>
+    {{1.234567|number:2}}
+    <br>
+    {{
+        [{"name":"Chao","status":"awake"},{"name":"Q","status":"awake"},{"name":"N",status:"awake"}]
+        | orderBy:"name":true
+    }}
+
+</div>
+</body>
+</html>
