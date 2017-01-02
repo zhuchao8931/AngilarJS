@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义过滤器</title>
+    <script src="//cdn.bootcss.com/angular.js/1.6.1/angular.min.js"></script>
+
+    <script>
+        angular.module("myApp.filters",[])
+            .filter("capitalize",function(){
+                return function (input) {
+                    if(input){
+                        return input[0].toUpperCase()+input.slice(1)
+                    }
+                }
+            })
+    </script>
+    <script src="app01.js"></script>
+</head>
+<body>
+<div ng-app="myApp" ng-controller="MyController">
+    {{" ginger loves dog treats"|lowercase|capitalize}}
+</div>
+</body>
+</html>
